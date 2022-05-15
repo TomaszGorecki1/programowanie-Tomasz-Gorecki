@@ -1,4 +1,4 @@
 ﻿  ConsoleApplication2.cpp
-D:\GIT\programowanie-Tomasz-Gorecki\ConsoleApplication2\ConsoleApplication2.cpp(33,14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-D:\GIT\programowanie-Tomasz-Gorecki\ConsoleApplication2\ConsoleApplication2.cpp(38,14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\GIT\programowanie-Tomasz-Gorecki\ConsoleApplication2\ConsoleApplication2.cpp(34,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\GIT\programowanie-Tomasz-Gorecki\ConsoleApplication2\ConsoleApplication2.cpp(39,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   ConsoleApplication2.vcxproj -> D:\GIT\programowanie-Tomasz-Gorecki\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe

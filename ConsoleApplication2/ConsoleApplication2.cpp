@@ -29,55 +29,55 @@ void deltaetc(int a, int b, int c)
     delta = delta - tmp1;
     cout << "Delta dla podanych parametrow funkcji to: " << delta << endl;
 
-    int mz1 = 0;
-    mz1 = -b - sqrt(delta);
-    mz1 = mz1 / (2 * a);
-    cout << "pierwsze miejsce zerowe to: " << mz1 << endl;
+    if (delta > 0) {
+        int mz1 = 0;
+        mz1 = -b - sqrt(delta);
+        mz1 = mz1 / (2 * a);
+        cout << "pierwsze miejsce zerowe to: " << mz1 << endl;
 
-    int mz2 = 0;
-    mz2 = -b + sqrt(delta);
-    mz2 = mz2 / (2 * a);
-    cout << "drugie miejsce zerowe to: " << mz2 << endl;
+        int mz2 = 0;
+        mz2 = -b + sqrt(delta);
+        mz2 = mz2 / (2 * a);
+        cout << "drugie miejsce zerowe to: " << mz2 << endl;
 
-    int p = 0;
-    p = -b;
-    p = p / (2 * a);
-    cout << "Wierzcholek 1 - p to: " << p << endl;
+        int p = 0;
+        p = -b;
+        p = p / (2 * a);
+        cout << "Wierzcholek 1 - p to: " << p << endl;
 
-    int q = 0;
-    q = -delta / (4 * a);
-    cout << "Wierzcholek 2 - q to: " << q << endl;
+        int q = 0;
+        q = -delta / (4 * a);
+        cout << "Wierzcholek 2 - q to: " << q << endl;
+    }
+    else if (delta < 0) {
+        cout << "Delta jest ujemna wiec nie ma miejsc zerowych" << endl;
+        int p = 0;
+        p = -b;
+        p = p / (2 * a);
+        cout << "Wierzcholek 1 - p to: " << p << endl;
+
+        int q = 0;
+        q = -delta / (4 * a);
+        cout << "Wierzcholek 2 - q to: " << q << endl;
+        return;
+    }
+    
+}
+void mnozenie(int a, int b) 
+{
+    int wynik = a * b;
+    cout << "wynik to " << wynik << endl;
 }
 
-
-
 int main()
-{/*
-    int a;
-    cout << "wprowadz liczbe: ";
-    cin >> a;
-    dziel(a);
-    bezwgl(a);
-    cout << "wprowadz wspolczynnik funkcji a:";
-    a = 0;
-    cin >> a;
-    cout << "wprowadz wspolczynnik funkcji b:";
-    int b = 0;
-    cin >> b;
-    cout << "wprowadz wspolczynnik funkcji c:";
-    int c = 0;
-    cin >> c;
-    deltaetc(a, b, c);*/
-
+{
+    while(true){
     cout << "_________________Kalkulator Wyrazen Matematycznych______________________" << endl;
     cout << "|1) Dzielniki liczby                                                   |" << endl;
     cout << "|2) Wartosc bezwgledna liczby                                          |" << endl;
     cout << "|3) Delta, miejsca zerowe i wierzcholek (p i q)                        |" << endl;
-    cout << "|4) P                                                                  |" << endl;
-    cout << "|5)                                                                    |" << endl;
-    cout << "|6)                                                                    |" << endl;
-    cout << "|7)                                                                    |" << endl;
-    cout << "|                                                                      |" << endl;
+    cout << "|4) Mnozenie dwoch liczb                                               |" << endl;
+    cout << "|5) Aby wylaczyc program wpisz 0                                       |" << endl;
     cout << "|          Aby wykonac kalkulacje nalezy wpisac odpowiedni numer       |" << endl;
     cout << "|______________________________________________________________________|" << endl;
 
@@ -108,6 +108,19 @@ int main()
         cin >> c;
         deltaetc(a, b, c);
     }
+    if (choice == 4) {
+        cout << "wprowadz pierwsza liczbe do mnozenia:";
+        int a = 0;
+        cin >> a;
+        cout << "wprowadz druga liczbe do mnozenia:";
+        int b = 0;
+        cin >> b;
+        mnozenie(a, b);
+    }
 
-    return 0;
+    if (!choice) 
+    {
+        return 0;
+    }
+   }
 }
